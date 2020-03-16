@@ -2,26 +2,26 @@ const Blockchain = require('./blockchain');
 
 const bitcoin = new Blockchain();
 
-const previousBlockHash = 'flaskdjhflkjahsdflashdflkuahsdf';
-const currentBlockData = [
-    {
-        amount: 20,
-        sender: 'NEWfshdlkjfahsljdfhsldfj',
-        recipient: 'sdfljsdkljfhsdkjfhsdjf'
-    },
-    {
-        amount: 40,
-        sender: 'sdflkjsdlkfjlskdjflkjsdf',
-        recipient: 'lkjsdflkjslkdjflksdf'
-    },
-    {
-        amount: 5000,
-        sender: 'lkashdfkljhwehrjklfelwf',
-        recipient: 'flsdjflksjdflkshdfliwehl'
-    }
-];
+// const previousBlockHash = 'flaskdjhflkjahsdflashdflkuahsdf';
+// const currentBlockData = [
+//     {
+//         amount: 20,
+//         sender: 'NEWfshdlkjfahsljdfhsldfj',
+//         recipient: 'sdfljsdkljfhsdkjfhsdjf'
+//     },
+//     {
+//         amount: 40,
+//         sender: 'sdflkjsdlkfjlskdjflkjsdf',
+//         recipient: 'lkjsdflkjslkdjflksdf'
+//     },
+//     {
+//         amount: 5000,
+//         sender: 'lkashdfkljhwehrjklfelwf',
+//         recipient: 'flsdjflksjdflkshdfliwehl'
+//     }
+// ];
 
-console.log(bitcoin.hashBlock(previousBlockHash, currentBlockData, 24132));
+// console.log(bitcoin.hashBlock(previousBlockHash, currentBlockData, 24132));
 // console.log(bitcoin.proofOfWork(previousBlockHash, currentBlockData));
 
 // bitcoin.createNewBlock(
@@ -66,4 +66,4 @@ console.log(bitcoin.hashBlock(previousBlockHash, currentBlockData, 24132));
 //     'kjhaskdjfhkjsdhfkjadshkjfhasjdasdf'
 // );
 
-// console.log(bitcoin);
+console.log(bitcoin);
