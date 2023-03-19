@@ -16,7 +16,7 @@ Blockchain.prototype.createNewBlock = function(nonce, previousBlockHash, hash) {
         hash: hash,
         previousBlockHash: previousBlockHash
     };
-    this.pendingTransactions = [];
+    this.pendingTransactions = newBlock;
     this.chain.push(newBlock);
 
     return newBlock;
@@ -44,7 +44,7 @@ Blockchain.prototype.createNewTransaction = function(
 Blockchain.prototype.hashBlock = function(
     previousBlockHash,
     currentBlockData,
-    nonce
+
 ) {
     const dataAsString =
         previousBlockHash + nonce.toString() + JSON.stringify(currentBlockData);
@@ -56,7 +56,7 @@ Blockchain.prototype.proofOfWork = function(
     previousBlockHash,
     currentBlockData
 ) {
-    let nonce = 0;
+    let nonce = 1;
     let hash = this.hashBlock(previousBlockHash, currentBlockData, nonce);
     while (hash.substring(0, 4) !== '0000') {
         nonce++;
@@ -64,5 +64,3 @@ Blockchain.prototype.proofOfWork = function(
     }
     return nonce;
 };
-
-module.exports = Blockchain;
